@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cl_main"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/color_white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:text="Title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-condensed-light"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/content"
+                android:text="@string/we_would_love_to_hear_you_thought_concern_or_problem_with_anything_so_we_can_improve"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/title"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                >
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_1">
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_1"
+                        android:ems="15"
+                        android:hint="@string/name"
+                        android:inputType="textPersonName"
+                        android:maxLength="10"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_1">
+
+                    <EditText
+                        android:id="@+id/mobile_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_1"
+                        android:ems="15"
+                        android:hint="@string/mobile_number"
+                        android:inputType="phone"
+                        android:maxLength="12"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_1">
+
+                    <EditText
+                        android:id="@+id/mail_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_1"
+                       android:paddingStart="25dp"
+                        android:ems="15"
+                        android:hint="@string/mail_id"
+                        android:inputType="textEmailAddress"
+                        android:paddingEnd="10dp"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_1">
+
+                    <EditText
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/edittext_1"
+                        android:ems="15"
+                        android:gravity="top"
+                        android:drawableStart="@drawable/ic_red_arrow"
+                        android:hint="@string/description"
+                        android:inputType="textMultiLine"
+                        android:paddingEnd="10dp"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:id="@+id/Continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_6"
+                    android:text="@string/continue_txt"
+                    android:textAllCaps="false"
+                    android:ems="12"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/color_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

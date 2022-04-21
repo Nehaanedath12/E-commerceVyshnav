@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="50dp"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_1"
+        android:id="@+id/til_1"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/code"
+            android:ems="3"
+            android:hint="+#"
+            android:background="@drawable/edittext_1"
+            android:padding="10dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_1"
+        android:id="@+id/til_2"
+        android:layout_toEndOf="@id/til_1"
+        android:layout_marginStart="10dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/phone_no"
+            android:ems="10"
+            android:hint="@string/mobile_number"
+            android:background="@drawable/edittext_1"
+            android:padding="10dp"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_4"
+        android:text="next"
+        android:layout_below="@id/til_2"
+        android:layout_marginTop="40dp"
+        />
+</RelativeLayout>
+</RelativeLayout>

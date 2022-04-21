@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/a_one_time_password_otp_was_send_to_your_registered_mobile_number_n_enter_it_after_it_arrives"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center"
+        android:id="@+id/message"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_no"
+        android:text="phone number"
+        android:textColor="@color/color_blue"
+        android:layout_below="@+id/message"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-light"
+        />
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone_no"
+        android:id="@+id/rl_1"
+        >
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:background="@drawable/edittext_1"
+    android:layout_marginTop="50dp"
+    android:hint="OTP"
+    android:ems="10"
+    android:textSize="20sp"
+    android:gravity="center"
+    android:layout_centerInParent="true"
+    android:inputType="number"
+    android:maxLength="6"
+    android:id="@+id/et_otp"
+    />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/check"
+            android:layout_toEndOf="@id/et_otp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            />
+    </RelativeLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Time left : 1:00"
+    android:layout_below="@+id/rl_1"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:id="@+id/time_left"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:layout_below="@id/time_left"
+        android:background="@drawable/button_4"
+        android:ems="10"
+        android:id="@+id/Continue"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:layout_below="@id/Continue"
+        android:background="@null"
+        android:textColor="#FF0000"
+        android:ems="10"
+        android:id="@+id/close"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

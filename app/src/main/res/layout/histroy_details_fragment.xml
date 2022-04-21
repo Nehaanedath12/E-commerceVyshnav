@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:clickable="true"
+    android:focusable="true"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_1"
+    android:orientation="vertical"
+    android:layout_below="@id/heading"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:visibility="visible"
+    android:background="@drawable/black_line"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textColor="@color/color_blue"
+        android:text="status"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        />
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/document_icon"
+            android:src="@drawable/ic_document"
+            />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reference_number"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/ref_text"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/document_icon"
+        android:textColor="@color/color_black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reference_number"
+        android:layout_marginStart="10dp"
+        android:id="@+id/ref_no"
+        android:layout_below="@id/ref_text"
+        android:textSize="12sp"
+        android:layout_toEndOf="@id/document_icon"
+        android:fontFamily="sans-serif-light"
+        />
+
+    </RelativeLayout>
+
+
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_weight="1"
+    >
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_calendar"
+        android:id="@+id/calender_icon"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_date"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:id="@+id/date_text"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/calender_icon"
+        android:textColor="@color/color_black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Date"
+        android:layout_marginStart="10dp"
+        android:id="@+id/order_date"
+        android:textSize="12sp"
+        android:layout_toEndOf="@id/calender_icon"
+        android:layout_below="@id/date_text"
+        android:fontFamily="sans-serif-light"
+        />
+</RelativeLayout>
+</LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+
+    >
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_home_2"
+    android:id="@+id/home_icon"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address 1"
+        android:layout_toEndOf="@id/home_icon"
+        android:layout_marginStart="10dp"
+        android:id="@+id/address_one"
+        android:maxLines="2"
+        android:layout_marginTop="10dp"
+        android:textIsSelectable="true"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address 2"
+        android:layout_marginStart="10dp"
+        android:id="@+id/address_two"
+        android:textIsSelectable="true"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="2"
+        android:textSize="12sp"
+        android:layout_below="@id/address_one"
+        android:layout_toEndOf="@id/home_icon" />
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_edit" />
+</RelativeLayout>
+
+</LinearLayout>
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/order_history_details"
+        android:textSize="25sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_order_history_details"
+        android:layout_below="@id/rl_1"
+        android:layout_marginTop="20dp"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/empty_frame"
+        android:visibility="invisible"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_history"
+            android:text="@string/no_order_history_found"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed-light"
+            />
+    </FrameLayout>
+</RelativeLayout>

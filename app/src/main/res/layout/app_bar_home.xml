@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/color_gray_1"
+            app:popupTheme="@style/AppTheme"
+            app:theme="@style/ToolbarColoredBackArrow">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/language"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/rl_3" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_3"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/rl_1">
+
+                    <ImageView
+                        android:id="@+id/img_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_notifications" />
+
+                    <TextView
+                        android:id="@+id/notification_text"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/number_item_bg"
+                        android:padding="2dp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/color_white"
+                        android:textSize="10dp"
+                        android:text=" "
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_1"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/rl_2">
+
+                    <ImageView
+                        android:id="@+id/favorites"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_love" />
+
+                    <TextView
+                        android:id="@+id/wishlist_count"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/number_item_bg"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:textColor="@color/color_white"
+                        android:textSize="10dp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_cart_white" />
+
+                    <TextView
+                        android:id="@+id/cart_count"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/number_item_bg"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:textColor="@color/color_white"
+                        android:textSize="10dp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
